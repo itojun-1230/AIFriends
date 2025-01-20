@@ -8,21 +8,16 @@
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
+struct CreateFriendView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
 
     var body: some View {
+        // ナビゲーションバー
         VStack {
-            // CreateFriendViewへ遷移する
-            NavigationStack {
-                Image(.title)
-                NavigationLink(destination: CreateFriendView()) {
-                    Text("友達を作りに行く！")
-                }
-                .padding(100)
-            }
-            
+            Text("Create Frined")
+                .font(.headline)
+                .padding()
         }
     }
 }
